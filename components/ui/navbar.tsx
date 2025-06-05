@@ -1,5 +1,5 @@
 "use client";
-import { PagesInfo } from "../types/pages";
+import { PagesInfo } from "../../types/pages";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useEffect, useState } from "react";
