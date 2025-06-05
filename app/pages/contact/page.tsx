@@ -8,9 +8,7 @@ type Message = {
   subject: string,
   content: string
 }
-export default function Contact() {
-
-  const notify = () => toast("Message sent successfully!");
+export default function Contact() {  
 
   const [message, setMessage] = useState<Message>({
     name: "", email: "", subject: "", content: ""
@@ -26,7 +24,6 @@ export default function Contact() {
     });
   };
 
-
   async function sendMessage() {
     console.log(message)
     setMessage({
@@ -39,8 +36,17 @@ export default function Contact() {
       },
       body: JSON.stringify(message),
     });
-
-    notify();
+   
+    toast.info('Message sent successfully', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",      
+    });
 
     const data = await response.json();
     return data;
@@ -62,7 +68,18 @@ export default function Contact() {
           Send Message
         </button>
       </div>
-      <ToastContainer />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 }
