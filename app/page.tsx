@@ -28,7 +28,8 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-items-center min-h-screen max-w-[100vw] p-8 pb-10 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="flex flex-col items-center justify-items-center min-h-screen max-w-[100vw] pb-10 gap-16">
+    {/* <div className="flex flex-col items-center justify-items-center min-h-screen max-w-[100vw] p-8 pb-10 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]"> */}
       {/* <div className="text-6xl font-bold bg-primary rounded-sm p-8 w-4/6 text-center shadow-2xl">
         Your Next Site
       </div>
@@ -46,7 +47,7 @@ export default function Home() {
         align: "start",
         loop: true,
       }}
-      className="w-full max-w-[70vw]"
+      className="w-[100vw]"
       >
         <CarouselContent>
           {/* <CarouselItem>...</CarouselItem> */}
@@ -82,7 +83,7 @@ function Card({
 }) {
   return (
     <div
-      className={`flex flex-col items-center rounded-sm h-96 shadow-lg p-4 text-white relative overflow-hidden w-max-10/12`}
+      className={`flex flex-col rounded-sm h-96 shadow-lg p-4 text-white relative overflow-hidden w-max-10/12`}
     >
       <Image
         className="absolute inset-0 w-full h-full object-cover -z-10"
@@ -91,7 +92,7 @@ function Card({
         width={800}
         alt={`${title} illustration`}
       />
-      <h1 className="mt-4 text-2xl">{title}</h1>
+      <h1 className="font-bold mt-4 text-2xl">{title}</h1>
       <span className="bg-black/20 backdrop-blur-sm p-4 rounded-sm mt-auto mb-8">
         {text}
       </span>
