@@ -5,8 +5,11 @@
 	],
 	"service": "next-app",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+	
 	"mounts": [
-		"source=${localWorkspaceFolder},target=/workspace,type=bind"
+		// "source=${localWorkspaceFolder},target=/workspace,type=bind"
+		"source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind"
 	],
 	"overrideCommand": false,
 	"features": {
