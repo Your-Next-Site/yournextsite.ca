@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
     const { name, email, subject, content } = await req.json();
 
     const params = {
-      Source: "me@wagnerpires.ca", // Must be a verified email in SES
+      Source: "not-reply@yournextsite.ca", // Must be a verified email in SES
       Destination: { ToAddresses: ["me@wagnerpires.ca", "pmacdonald15@gmail.com"] },
     //   Destination: { ToAddresses: [email] },
       Message: {
