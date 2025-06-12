@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Link from "next/link";
 
 export default function Home() {
   let cards = [
@@ -47,7 +48,6 @@ export default function Home() {
               />
             </CarouselItem>
           ))}
-          {/* </div> */}
         </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />
@@ -55,12 +55,13 @@ export default function Home() {
       <div className="text-center max-w-4xl px-4">
         <h1 className="text-3xl font-bold mb-4">Trust us to help build your perfect site</h1>
         <p className="text-lg text-gray-500 mb-6">
-          We specialize in creating custom websites that perfectly match your vision and business needs. With years of experience and a passionate team of developers, we deliver websites that stand out.
+          We specialize in creating custom websites that perfectly match your vision and business needs. With experience and a passionate team of developers, we deliver websites that stand out.
         </p>
         <p className="text-lg text-gray-500">
-          From small business websites to complex web applications, we handle every project with the same level of dedication and expertise. Let's work together to bring your digital presence to life.
+          We specialize in creating perfect websites for small businesses. Let's work together to build your ideal online presence.
         </p>
       </div>
+      <Link className='border p-4 hover:scale-110' href='/pages/contact'>Contact Us</Link>
     </div>
   );
 }
