@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Link from "next/link";
+import LinkToContacts from "@/components/ui/link-to-contact";
 
 export default function Home() {
   let cards = [
@@ -29,14 +30,14 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-items-center min-h-screen max-w-[100vw] pb-10 gap-16">
+    <div className="flex flex-col items-center justify-items-center min-h-screen max-w-[100vw] pb-10 p-8 gap-16">
 
       <Carousel
         opts={{
           align: "start",
           loop: true,
         }}
-        className="w-[100vw]"
+        className="w-[100vw] md:w-[70vw]"
       >
         <CarouselContent>
           {cards?.map((card, index) => (
@@ -61,7 +62,7 @@ export default function Home() {
           We specialize in creating perfect websites for small businesses. Let's work together to build your ideal online presence.
         </p>
       </div>
-      <Link className='border p-4 hover:scale-110' href='/pages/contact'>Contact Us</Link>
+      <LinkToContacts />
     </div>
   );
 }
@@ -82,8 +83,8 @@ function Card({
       <Image
         className="absolute inset-0 w-full h-full object-cover -z-10"
         src={`/${imageSrc}`}
-        height={800}
-        width={800}
+        height={1200}
+        width={1200}
         alt={`${title} illustration`}
       />
       <h1 className="font-bold mt-4 text-2xl">{title}</h1>
