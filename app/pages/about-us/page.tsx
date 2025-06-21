@@ -15,19 +15,40 @@ export default function AboutUs() {
       {/* Team Section */}
       <h2 className="text-3xl font-bold mt-8 mb-4">Meet Our Team</h2>
       <div className="flex flex-wrap justify-center">
-        <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
-          {/* <Image src="https://example.com/team-member1.jpg" alt="Team Member 1" className="rounded-full w-48 h-48 object-cover" /> */}
+        <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 flex flex-col items-center">
+          <Image
+            width={500}
+            height={500}
+            src="/patrickmacdonald.jpg"
+            alt="Team Member 1"
+            className="rounded-full w-48 h-48 object-cover"
+            style={{ objectPosition: "70% 50%" }} // Adjust the first value (horizontal) to move left/right, second (vertical) for up/down
+          />
           <h3 className="text-xl font-bold mt-4">Patrick MacDonald</h3>
           <p className="text-lg text-gray-500">Founder & CEO & Developer</p>
         </div>
         <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
-          {/* <Image src="https://example.com/team-member2.jpg" alt="Team Member 2" className="rounded-full w-48 h-48 object-cover" /> */}
+          <Image
+            width={500}
+            height={500}
+            src="/placeholder.jpg"
+            alt="Team Member 1"
+            className="rounded-full w-48 h-48 object-cover"
+          // style={{ objectPosition: "70% 50%" }} // Adjust the first value (horizontal) to move left/right, second (vertical) for up/down
+          />
           <h3 className="text-xl font-bold mt-4">Wagner Pires Ferreira </h3>
           <p className="text-lg text-gray-500">Founder & CTO & Developer</p>
         </div>
         <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
-          {/* <Image src="https://example.com/team-member2.jpg" alt="Team Member 2" className="rounded-full w-48 h-48 object-cover" /> */}
-          <h3 className="text-xl font-bold mt-4">Wagner Pires Ferreira </h3>
+          <Image
+            width={500}
+            height={500}
+            src="/placeholder.jpg"
+            alt="Team Member 1"
+            className="rounded-full w-48 h-48 object-cover"
+          // style={{ objectPosition: "70% 50%" }} // Adjust the first value (horizontal) to move left/right, second (vertical) for up/down
+          />
+          <h3 className="text-xl font-bold mt-4">Xiangyu Hou</h3>
           <p className="text-lg text-gray-500">Lead Designer & Developer</p>
         </div>
       </div>
