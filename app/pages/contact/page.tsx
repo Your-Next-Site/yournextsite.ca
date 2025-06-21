@@ -47,8 +47,8 @@ export default function Contact() {
   }
 
   return (
-    <div className="flex flex-col items-center ">
-      <div className="flex flex-col w-full max-w-10/12 md:max-w-[500px] m-4 p-4 bg-[var(--primary)] shadow-2xl shadow-primary rounded-xl">
+    <div className="flex flex-col items-center pb-8">
+      <div className="flex flex-col w-full max-w-10/12 md:max-w-[500px] m-4 p-4 bg-[var(--primary)] shadow-2xl shadow-primary rounded-xl ">
         <h1 className="font-bold"> Contact Us</h1>
         <label className="mt-2">Name</label>
         <input name="name" value={message.name} onChange={(e) => handleChange(e)} className="bg-foreground rounded-md p-2 text-background"></input>
