@@ -1,67 +1,60 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { submitForm } from '@/actions/action';
 import { ToastContainer, toast } from 'react-toastify';
 
-type Message = {
-  name: string,
-  email: string,
-  subject: string,
-  content: string
-}
+
 export default function Contact() {
 
-  const notify = () => toast("Message sent successfully!");
-
-  const [message, setMessage] = useState<Message>({
-    name: "", email: "", subject: "", content: ""
-  });
-
-  useEffect(() => { }, [message]);
-
-  function handleChange(e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) {
-    const { name, value } = e.target;
-    setMessage({
-      ...message,
-      [name]: value,
+  function sendToast() {
+    toast.info('Message sent successfully', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
     });
-  };
-
-
-  async function sendMessage() {
-    console.log(message)
-    setMessage({
-      name: "", email: "", subject: "", content: ""
-    })
-    const response = await fetch("/api/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(message),
-    });
-
-    notify();
-
-    const data = await response.json();
-    return data;
   }
 
   return (
-    <div className="flex flex-col items-center pb-8">
-      <div className="flex flex-col w-full max-w-10/12 md:max-w-[500px] m-4 p-4 bg-[var(--primary)] shadow-2xl shadow-primary rounded-xl ">
+    <div className="flex flex-col items-center ">
+      <form
+        action={async (formData: FormData) => {
+          const success = await submitForm(formData);
+          if (success?.success === true) sendToast();
+        }}
+        className="flex flex-col w-full max-w-10/12 md:max-w-[500px] m-4 p-4 bg-[var(--primary)] shadow-2xl shadow-primary rounded-xl"
+        >
         <h1 className="font-bold"> Contact Us</h1>
-        <label className="mt-2">Name</label>
-        <input name="name" value={message.name} onChange={(e) => handleChange(e)} className="bg-foreground rounded-md p-2 text-background"></input>
+        <label
+          className="mt-2">Name</label>
+        <input
+          name="name"
+          required
+          type="text"
+          className="bg-foreground rounded-md p-2 text-background" />
         <label className="mt-2">email</label>
-        <input name="email" value={message.email} type="email" onChange={(e) => handleChange(e)} className="bg-foreground rounded-md p-2 text-background"></input>
+        <input
+          name="email" required
+          type="email"
+          className="bg-foreground rounded-md p-2 text-background" />
         <label className="mt-2">Subject</label>
-        <input name="subject" value={message.subject} onChange={(e) => handleChange(e)} className="bg-foreground rounded-md p-2 text-background"></input>
+        <input
+          name="subject"
+          required
+          type="text"
+          className="bg-foreground rounded-md p-2 text-background" />
         <label className="mt-2">Message</label>
-        <textarea name="content" value={message.content} onChange={(e) => handleChange(e)} className="h-40 bg-foreground rounded-md p-2 text-background"></textarea>
-        <button onClick={() => sendMessage()} className="bg-background p-4 font-bold m-4 rounded-md border-2 border-background hover:cursor-pointer hover:text-background hover:bg-[var(--primary)] hover:border-background hover:border-2">
+        <textarea
+          name="content"
+          required
+          className="bg-foreground rounded-md p-2 text-background" />
+        <button className="bg-background p-4 font-bold m-4 rounded-md border-2 border-background hover:cursor-pointer hover:text-background hover:bg-[var(--primary)] hover:border-background hover:border-2">
           Send Message
         </button>
-      </div>
+      </form>
       <ToastContainer />
     </div>
   );
