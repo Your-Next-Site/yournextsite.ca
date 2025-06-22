@@ -10,7 +10,7 @@ const sesClient = new SESClient({
 });
 
 export async function submitForm(formData: FormData) {
-    
+
     try {
         const name = formData.get('name') as string;
         const email = formData.get('email') as string;
@@ -19,7 +19,7 @@ export async function submitForm(formData: FormData) {
 
         const params = {
             Source: "no-reply@yournextsite.ca", // Must be a verified email in SES
-            Destination: { ToAddresses: ["me@wagnerpires.ca", "patrick@yournextsite.ca"] },
+            Destination: { ToAddresses: ["me@wagnerpires.ca", "patrick@yournextsite.ca", "pmacdonald15@gmail.com"] },
             //   Destination: { ToAddresses: [email] },
             Message: {
                 Subject: { Data: subject },
@@ -27,8 +27,8 @@ export async function submitForm(formData: FormData) {
             },
         };
 
-        await sesClient.send(new SendEmailCommand(params));
-
+        const results = await sesClient.send(new SendEmailCommand(params));
+        console.log("results: ", results)
         return { success: true };
     } catch (error) {
         console.error("Error sending email:", error);
