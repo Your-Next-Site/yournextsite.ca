@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Title() {
   return (
     <div className={`w-[120px] h-[110px]`}>

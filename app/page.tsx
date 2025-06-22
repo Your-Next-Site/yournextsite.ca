@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { title } from "process";
+
 import {
   Carousel,
   CarouselContent,
@@ -7,11 +7,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Link from "next/link";
 import LinkToContacts from "@/components/ui/link-to-contact";
 
 export default function Home() {
-  let cards = [
+  const cards = [
     {
       title: "Functionality",
       text: "Great functionality is our top priority. We ensure your site works flawlessly across all devices and provides an exceptional user experience.",
@@ -59,7 +58,7 @@ export default function Home() {
           We specialize in creating custom websites that perfectly match your vision and business needs. With experience and a passionate team of developers, we deliver websites that stand out.
         </p>
         <p className="text-lg text-gray-500">
-          We specialize in creating perfect websites for small businesses. Let's work together to build your ideal online presence.
+          We specialize in creating perfect websites for small businesses. Let&apos;s work together to build your ideal online presence.
         </p>
       </div>
       <LinkToContacts />
