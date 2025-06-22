@@ -7,6 +7,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Link from "next/link";
+import LinkToContacts from "@/components/ui/link-to-contact";
 
 export default function Home() {
   let cards = [
@@ -28,46 +30,39 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-items-center min-h-screen max-w-[100vw] pb-10 gap-16">
-    {/* <div className="flex flex-col items-center justify-items-center min-h-screen max-w-[100vw] p-8 pb-10 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]"> */}
-      {/* <div className="text-6xl font-bold bg-primary rounded-sm p-8 w-4/6 text-center shadow-2xl">
-        Your Next Site
-      </div>
-      <Image
-        className="w-auto "
-        src="/website.jpg"
-        height={800}
-        width={800}
-        alt="Website illustration"
-      /> */}
+    <div className="flex flex-col items-center justify-items-center min-h-screen max-w-[100vw] pb-10 p-8 gap-16">
 
       <Carousel
-      
-      opts={{
-        align: "start",
-        loop: true,
-      }}
-      className="w-[100vw]"
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        className="w-[100vw] md:w-[70vw]"
       >
         <CarouselContent>
-          {/* <CarouselItem>...</CarouselItem> */}
-          {/* <CarouselItem>...</CarouselItem> */}
-
-      {/* <div className="flex w-full justify-center gap-8 indent-8"> */}
-        {cards?.map((card, index) => (
-          <CarouselItem key={index}>
-            <Card
-              title={card.title}
-              text={card.text}
-              imageSrc={card.imageSrc}
-            />
-          </CarouselItem>
-        ))}
-      {/* </div> */}
+          {cards?.map((card, index) => (
+            <CarouselItem key={index}>
+              <Card
+                title={card.title}
+                text={card.text}
+                imageSrc={card.imageSrc}
+              />
+            </CarouselItem>
+          ))}
         </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
+      <div className="text-center max-w-4xl px-4">
+        <h1 className="text-3xl font-bold mb-4">Trust us to help build your perfect site</h1>
+        <p className="text-lg text-gray-500 mb-6">
+          We specialize in creating custom websites that perfectly match your vision and business needs. With experience and a passionate team of developers, we deliver websites that stand out.
+        </p>
+        <p className="text-lg text-gray-500">
+          We specialize in creating perfect websites for small businesses. Let's work together to build your ideal online presence.
+        </p>
+      </div>
+      <LinkToContacts />
     </div>
   );
 }
@@ -88,8 +83,8 @@ function Card({
       <Image
         className="absolute inset-0 w-full h-full object-cover -z-10"
         src={`/${imageSrc}`}
-        height={800}
-        width={800}
+        height={1200}
+        width={1200}
         alt={`${title} illustration`}
       />
       <h1 className="font-bold mt-4 text-2xl">{title}</h1>

@@ -25,7 +25,8 @@ export default function Contact() {
           const success = await submitForm(formData);
           if (success?.success === true) sendToast();
         }}
-        className="flex flex-col w-full max-w-10/12 md:max-w-[500px] m-4 p-4 bg-[var(--primary)] shadow-2xl shadow-primary rounded-xl">
+        className="flex flex-col w-full max-w-10/12 md:max-w-[500px] m-4 p-4 bg-[var(--primary)] shadow-2xl shadow-primary rounded-xl"
+        >
         <h1 className="font-bold"> Contact Us</h1>
         <label
           className="mt-2">Name</label>
