@@ -22,6 +22,13 @@ export const metadata: Metadata = {
   title: "Your Next site ",
   description: "Get a quote today!",
   icons: "/favicon.ico",
+   keywords: [
+    "your next website",
+    "build a site",
+    "make your site",
+    "launch a web site",
+    "your next site"
+   ],
 };
 
 export default function RootLayout({
