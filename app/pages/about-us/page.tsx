@@ -43,7 +43,7 @@ export default function AboutUs() {
           <Image
             width={500}
             height={500}
-            src="/placeholder.jpg"
+            src="/Xiangyu.jpeg"
             alt="Team Member 1"
             className="rounded-full w-48 h-48 object-cover"
           // style={{ objectPosition: "70% 50%" }} // Adjust the first value (horizontal) to move left/right, second (vertical) for up/down
