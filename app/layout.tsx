@@ -39,9 +39,9 @@ export default function RootLayout({
 {
 
   return (
-    <html lang="en" className="w-[full] h-min-[100vh] scrollbar-gutter-stable">
+    <html lang="en" className="min-w-full min-h-screen">
       <body
-        className={`${raleway.variable} ${geistMono.variable} font-[var(--font-raleway)] antialiased `}
+        className={`${raleway.variable} ${geistMono.variable} font-[var(--font-raleway)] antialiased min-w-full min-h-screen`}
       >
         <Top/>
         {children}
