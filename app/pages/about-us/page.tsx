@@ -3,8 +3,7 @@ import Image from "next/image";
 
 export default function AboutUs() {
   return (
-    <div className="flex flex-col items-center pb-8 p-4 ">
-      {/* Hero Section */}
+    <div className="flex flex-col items-center pb-8 p-4 ">     
       <div
         className="w-full h-96 bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: "url('/functionality.jpg')" }}
@@ -43,7 +42,7 @@ export default function AboutUs() {
           <Image
             width={500}
             height={500}
-            src="/Xiangyu.jpeg"
+            src="/Xiangyu.jpg"
             alt="Team Member 1"
             className="rounded-full w-48 h-48 object-cover"
           // style={{ objectPosition: "70% 50%" }} // Adjust the first value (horizontal) to move left/right, second (vertical) for up/down
