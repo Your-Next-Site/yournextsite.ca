@@ -52,7 +52,7 @@ export default function Contact() {
           required
           className="bg-foreground rounded-md p-2 text-background" />
         <button className="bg-background p-4 font-bold m-4 rounded-md border-2 border-background hover:cursor-pointer hover:text-background hover:bg-[var(--primary)] hover:border-background hover:border-2">
-          Send Message
+          Send Email
         </button>
       </form>
       <ToastContainer />
