@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutUs() {
   return (
-    <div className="flex flex-col items-center pb-8 p-4 ">     
+    <div className="flex flex-col items-center pb-8 p-4 ">
       <div
         className="w-full h-96 bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: "url('/functionality.jpg')" }}
@@ -38,7 +38,7 @@ export default function AboutUs() {
           <h3 className="text-xl font-bold mt-4">Wagner Pires Ferreira </h3>
           <p className="text-lg text-gray-500">Founder & CTO & Developer</p>
         </div>
-         <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 flex flex-col items-center">
+        {/* <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 flex flex-col items-center">
           <Image
             width={500}
             height={500}
@@ -49,7 +49,7 @@ export default function AboutUs() {
           />
           <h3 className="text-xl font-bold mt-4">Xiangyu Hou</h3>
           <p className="text-lg text-gray-500">Lead Designer & Developer</p>
-        </div>
+        </div> */}
       </div>
 
       {/* Mission Section */}
