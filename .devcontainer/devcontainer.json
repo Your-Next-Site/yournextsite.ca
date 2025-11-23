@@ -1,12 +1,9 @@
 {
 	"name": "Existing Docker Compose (Extend)",
-	"dockerComposeFile": [
-		"../docker-compose.yaml"
-	],
+	"dockerComposeFile": ["../docker-compose.yaml"],
 	"service": "next-app",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
-	
 	"mounts": [
 		// "source=${localWorkspaceFolder},target=/workspace,type=bind"
 		"source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind"

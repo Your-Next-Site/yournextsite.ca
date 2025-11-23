@@ -1,17 +1,22 @@
-import Image from "next/image";
-import NavBar from "./navbar";
-import Title from "./title";
+import Image from 'next/image'
+import NavBar from './navbar'
+import Title from './title'
 
 export default function Top() {
-  return (
-    <header className="w-full flex flex-col pr-[var(--scrollbar-width)]">
-      <div className="flex flex-row w-full items-center">
-        <div>
-          <Image src="/logo5.png" width={250} height={250} alt="logo" />
-        </div>
-        <Title/>
-      </div>
-      <NavBar />
-    </header>
-  );
+	return (
+		<header className="flex w-full flex-col pr-[var(--scrollbar-width)]">
+			<div className="flex w-full flex-row items-center">
+				<div>
+					<Image
+						alt="logo"
+						height={250}
+						src="/logo5.png"
+						width={250}
+					/>
+				</div>
+				<Title />
+			</div>
+			<NavBar />
+		</header>
+	)
 }
