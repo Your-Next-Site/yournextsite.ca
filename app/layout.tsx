@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist_Mono, Raleway } from 'next/font/google'
 import './globals.css'
+import { Analytics } from '@vercel/analytics/next'
 import Script from 'next/script'
 import Top from '../components/ui/top'
 
@@ -47,6 +48,7 @@ export default function RootLayout({
 			>
 				<Top />
 				{children}
+				<Analytics />
 				<Script
 					async
 					src="https://www.googletagmanager.com/gtag/js?id=AW-17279681348"
