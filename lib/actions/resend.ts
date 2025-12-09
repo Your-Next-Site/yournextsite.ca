@@ -10,7 +10,7 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export async function sendEmail(
 	values: z.infer<typeof formSchema>,
 ): Promise<boolean> {
-	console.log('clicked')
+	
 	const validatedFields = formSchema.safeParse({
 		name: values.name,
 		subject: values.subject,
@@ -27,7 +27,7 @@ export async function sendEmail(
 		const { data, error } = await resend.emails.send({
 			from: 'Contact Form <contact@resend.dev>',
 			to: ['pmacdonald15@gmail.com'],
-			subject: 'Contact Form Filled Out',
+			subject: validatedFields.data.subject,
 			react: EmailTemplate({
 				name: validatedFields.data.name,
 				email: validatedFields.data.email,
