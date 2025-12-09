@@ -3,6 +3,7 @@
 :root {
 	--background: #062249;
 	--foreground: #fcfcff;
+	--destructive: #7f0808;
 	--primary: #006ee3;
 	--primary-selected: #007aff;
 	--secondary: #ff9500;
@@ -19,6 +20,7 @@
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
 	--color-primary: var(--primary);
+	--color-destructive: var(--destructive);
 	--font-sans: var(--font-geist-sans);
 	--font-mono: var(--font-geist-mono);
 }
@@ -27,6 +29,7 @@
 	:root {
 		--background: #062249;
 		--foreground: #d1d3df;
+		--destructive: #7f0808;
 		--primary: #006ee3;
 		--primary-selected: #007aff;
 		--secondary: #ff9500;
