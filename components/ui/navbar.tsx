@@ -17,17 +17,17 @@ export default function NavBar() {
 	}, [pathname])
 
 	return (
-		<div className="flex flex-row justify-evenly bg-primary font-bold text-[var(--surface)]">
+		<div className="flex flex-row justify-evenly bg-slate-900 font-bold text-gray-100 border-b border-slate-800">
 			<div className="grow"></div>
 			{PagesInfo.map((page) => (
 				<Link
-					className={`hover:bg-[var(--primary-selected)] ${
+					className={`hover:bg-slate-800 ${
 						page.url === pathname
-							? 'fade-border-in bg-[var(--primary-selected)]'
+							? 'fade-border-in bg-slate-800'
 							: ''
 					}
             
-            ${page.url === previousPage && page.url !== pathname ? 'fade-border-out' : ''}grow min-w-[120px] select-none border-b-[var(--primary)] px-4 py-2 text-center hover:cursor-pointer`}
+            ${page.url === previousPage && page.url !== pathname ? 'fade-border-out' : ''}grow min-w-[120px] select-none border-b-[var(--secondary)] px-4 py-2 text-center hover:cursor-pointer transition-colors`}
 					href={page.url}
 					key={page.order}
 				>

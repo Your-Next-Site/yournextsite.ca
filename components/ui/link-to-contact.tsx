@@ -1,12 +1,14 @@
 import Link from 'next/link'
+import { Button } from './button'
 
 export default function LinkToContacts() {
 	return (
-		<Link
-			className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
-			href="/pages/contact"
+		<Button
+			asChild
+			className="w-full text-lg font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-lg"
+			size="lg"
 		>
-			Get in Touch
-		</Link>
+			<Link href="/pages/contact">Get in Touch</Link>
+		</Button>
 	)
 }

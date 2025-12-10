@@ -134,7 +134,7 @@ export default function Contact() {
 									aria-invalid={fieldState.invalid}
 									className="min-h-[120px]"
 									id="form-rhf-textarea-about"
-									placeholder="I'm a software engineer..."
+									placeholder="I'm a have an idea, I wan to turn in to a website..."
 								/>
 								<FieldDescription>
 									Tell us more about yourself. This will be
