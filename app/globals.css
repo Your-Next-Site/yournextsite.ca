@@ -13,7 +13,6 @@
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
 	--color-destructive: var(--destructive);
-	
 }
 @keyframes fadeBorderIn {
 	0% {

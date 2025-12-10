@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.yournextsite.ca
+
+# Sitemaps
+Sitemap: https://www.yournextsite.ca/sitemap.xml

@@ -150,7 +150,7 @@ export default function ContactForm() {
 					/>
 				</FieldGroup>
 				<Button
-					className="w-full bg-blue-600 font-bold text-lg text-white shadow-lg hover:bg-blue-700 mt-8"
+					className="mt-8 w-full bg-blue-600 font-bold text-lg text-white shadow-lg hover:bg-blue-700"
 					size="lg"
 					type="submit"
 				>

@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { Geist_Mono, Raleway } from 'next/font/google'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/next'
-import Top from '../components/ui/top'
 import PageContainer from '@/components/ui/containers/page-container'
+import Top from '../components/ui/top'
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
