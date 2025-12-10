@@ -1,42 +1,20 @@
 @import "tailwindcss";
 
 :root {
-	--background: #062249;
-	--foreground: #fcfcff;
-	--destructive: #7f0808;
+	--background: #105693;
+	--foreground: #d1d3df;
+	--destructive: #d41e1e;
 	--primary: #006ee3;
 	--primary-selected: #007aff;
 	--secondary: #ff9500;
-	--surface: #fcfcff;
+	--surface: #f2f2f7;
 }
-
-@layer utilities {
-	.scrollbar-gutter-stable {
-		scrollbar-gutter: stable;
-	}
-}
-
 @theme inline {
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
-	--color-primary: var(--primary);
 	--color-destructive: var(--destructive);
-	--font-sans: var(--font-geist-sans);
-	--font-mono: var(--font-geist-mono);
+	
 }
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #062249;
-		--foreground: #d1d3df;
-		--destructive: #7f0808;
-		--primary: #006ee3;
-		--primary-selected: #007aff;
-		--secondary: #ff9500;
-		--surface: #f2f2f7;
-	}
-}
-
 @keyframes fadeBorderIn {
 	0% {
 		border-bottom-color: transparent;

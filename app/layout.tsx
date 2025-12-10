@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { Geist_Mono, Raleway } from 'next/font/google'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/next'
-import Script from 'next/script'
 import Top from '../components/ui/top'
+import PageContainer from '@/components/ui/containers/page-container'
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -47,9 +47,9 @@ export default function RootLayout({
 				className={`${raleway.variable} ${geistMono.variable} w-full font-[var(--font-raleway)] antialiased`}
 			>
 				<Top />
-				{children}
+				<PageContainer>{children}</PageContainer>
 				<Analytics />
-				<Script
+				{/* <Script
 					async
 					src="https://www.googletagmanager.com/gtag/js?id=AW-17279681348"
 					strategy="afterInteractive"
@@ -64,7 +64,7 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'AW-17279681348');
           `}
-				</Script>
+				</Script> */}
 			</body>
 		</html>
 	)
