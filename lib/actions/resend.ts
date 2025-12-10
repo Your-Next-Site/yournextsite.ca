@@ -1,5 +1,5 @@
 'use server'
-import { error } from 'console'
+import { error } from 'node:console'
 import { Resend } from 'resend'
 import type z from 'zod'
 import { EmailTemplate } from '@/components/ui/email-templates/contact-email'
@@ -10,7 +10,6 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export async function sendEmail(
 	values: z.infer<typeof formSchema>,
 ): Promise<boolean> {
-	
 	const validatedFields = formSchema.safeParse({
 		name: values.name,
 		subject: values.subject,

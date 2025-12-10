@@ -5,7 +5,7 @@ export default function LinkToContacts() {
 	return (
 		<Button
 			asChild
-			className="w-full text-lg font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-lg"
+			className="w-full bg-blue-600 font-bold text-lg text-white shadow-lg hover:bg-blue-700"
 			size="lg"
 		>
 			<Link href="/pages/contact">Get in Touch</Link>

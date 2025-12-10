@@ -57,7 +57,7 @@ export default function Contact() {
 	}
 
 	return (
-		<div className="flex flex-col items-center">
+		<>
 			<form
 				className="m-4 flex w-full max-w-10/12 flex-col rounded-xl bg-[var(--primary)] p-4 shadow-2xl shadow-primary md:max-w-[500px]"
 				onSubmit={form.handleSubmit(onSubmit)}
@@ -155,6 +155,6 @@ export default function Contact() {
 				</button>
 			</form>
 			<ToastContainer />
-		</div>
+		</>
 	)
 }

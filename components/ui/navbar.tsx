@@ -17,7 +17,7 @@ export default function NavBar() {
 	}, [pathname])
 
 	return (
-		<div className="flex flex-row justify-evenly bg-slate-900 font-bold text-gray-100 border-b border-slate-800">
+		<div className="flex flex-row justify-evenly border-slate-800 border-b bg-slate-900 font-bold text-gray-100">
 			<div className="grow"></div>
 			{PagesInfo.map((page) => (
 				<Link
@@ -27,7 +27,7 @@ export default function NavBar() {
 							: ''
 					}
             
-            ${page.url === previousPage && page.url !== pathname ? 'fade-border-out' : ''}grow min-w-[120px] select-none border-b-[var(--secondary)] px-4 py-2 text-center hover:cursor-pointer transition-colors`}
+            ${page.url === previousPage && page.url !== pathname ? 'fade-border-out' : ''}grow min-w-[120px] select-none border-b-[var(--secondary)] px-4 py-2 text-center transition-colors hover:cursor-pointer`}
 					href={page.url}
 					key={page.order}
 				>
