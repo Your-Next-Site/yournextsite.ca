@@ -13,6 +13,14 @@ const projects = [
 		layout: 'left',
 	},
 	{
+		title: 'Sports Rental Tracker',
+		description:
+			'Tracker Sports rental equipment with ease.',
+		image: '/sportstracker.png',
+		url: 'https://sportstracker.patmac.ca',
+		layout: 'right',
+	},
+	{
 		title: 'Landscape Friend',
 		description:
 			'Comprehensive lawn care management software built for landscaping professionals. Features client management, route optimization, and secure Stripe billing integration.',
