@@ -14,8 +14,7 @@ const projects = [
 	},
 	{
 		title: 'Sports Rental Tracker',
-		description:
-			'Tracker Sports rental equipment with ease.',
+		description: 'Tracker Sports rental equipment with ease.',
 		image: '/sportstracker.png',
 		url: 'https://sportstracker.patmac.ca',
 		layout: 'right',
